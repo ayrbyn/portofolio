@@ -40,12 +40,12 @@ export function HeroName() {
       animate="visible"
       className="font-display font-light text-text-primary leading-none tracking-tight flex flex-col"
     >
-      <div className="flex text-[100px] lg:text-[120px]">
+      <div className="flex text-[64px] sm:text-[80px] lg:text-[120px]">
         {firstName.map((char, index) => (
           <motion.span key={`f-${index}`} variants={childVariants}>{char}</motion.span>
         ))}
       </div>
-      <div className="flex text-[100px] lg:text-[120px]">
+      <div className="flex text-[64px] sm:text-[80px] lg:text-[120px]">
         {lastName.map((char, index) => (
           <motion.span key={`l-${index}`} variants={childVariants}>{char}</motion.span>
         ))}

@@ -41,7 +41,7 @@ export default function RootLayout({
         <ThemeToggle />
         <div className="flex min-h-screen">
           <Sidebar />
-          <main className="flex-1 ml-20 w-[calc(100%-5rem)]">
+          <main className="flex-1 w-full md:ml-20 md:w-[calc(100%-5rem)] pb-20 md:pb-0">
             <PageTransition>
               {children}
             </PageTransition>

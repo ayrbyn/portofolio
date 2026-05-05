@@ -16,7 +16,7 @@ export function WorksShowcase({ works }: { works: WorkItemType[] }) {
       {/* Left Column: Scrolling Frames */}
       <div 
         ref={scrollRef}
-        className="w-full md:w-[50%] lg:w-[55%] flex flex-col pt-12 md:pt-[30vh] pb-[10vh] md:pb-[30vh] gap-[20vh] md:gap-[40vh] z-10 md:h-full md:overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        className="w-full md:w-[50%] lg:w-[55%] flex flex-col pt-6 md:pt-[30vh] pb-4 md:pb-[30vh] gap-16 md:gap-[40vh] z-10 md:h-full md:overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         {works.map((work, index) => (
           <div key={work.id} className="flex flex-col">
@@ -37,17 +37,17 @@ export function WorksShowcase({ works }: { works: WorkItemType[] }) {
             </motion.div>
 
             {/* Mobile Text (Visible only on small screens) */}
-            <div className="md:hidden flex flex-col mt-6 mb-16 px-2">
-              <div className="font-mono text-[14px] text-[#6b6b6b] tracking-widest-2 mb-3">
+            <div className="md:hidden flex flex-col mt-5 mb-6 px-1">
+              <div className="font-mono text-[12px] text-[#6b6b6b] tracking-widest-2 mb-2">
                 [ {work.index} / {work.total} ]
               </div>
-              <h2 className="text-[28px] font-display font-medium text-text-primary leading-tight mb-2 uppercase">
+              <h2 className="text-[24px] font-display font-medium text-text-primary leading-tight mb-1 uppercase">
                 {work.title}
               </h2>
-              <div className="text-[14px] text-[#6b6b6b] mb-4">
+              <div className="text-[13px] text-[#6b6b6b] mb-3">
                 {work.category} / {work.type}
               </div>
-              <p className="text-[16px] text-[#6b6b6b] leading-relaxed mb-6">
+              <p className="text-[15px] text-[#6b6b6b] leading-relaxed mb-5">
                 {work.description}
               </p>
               {work.link && (
@@ -55,10 +55,10 @@ export function WorksShowcase({ works }: { works: WorkItemType[] }) {
                   href={work.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[13px] text-text-primary hover:text-[#6b6b6b] transition-colors border-b border-text-primary hover:border-[#6b6b6b] pb-0.5 w-max tracking-wider uppercase font-sans"
+                  className="inline-flex items-center gap-2 text-[12px] text-text-primary hover:text-[#6b6b6b] transition-colors border-b border-text-primary hover:border-[#6b6b6b] pb-0.5 w-max tracking-wider uppercase font-sans"
                 >
                   Visit Website
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
               )}
             </div>

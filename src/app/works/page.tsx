@@ -4,7 +4,7 @@ import { WorksShowcase } from "@/components/works/WorksShowcase";
 
 export default function WorksPage() {
   return (
-    <div className="relative pl-12 pt-12 pr-8 pb-32 md:pb-0 md:h-screen md:overflow-hidden flex flex-col">
+    <div className="relative px-5 md:pl-12 pt-10 md:pt-12 pr-5 md:pr-8 pb-10 md:pb-0 md:h-screen md:overflow-hidden flex flex-col">
       {/* Header */}
       <div className="flex justify-between items-end mb-0 shrink-0">
         <h1 className="text-[14px] tracking-[0.25em] text-text-primary uppercase">WORKS</h1>

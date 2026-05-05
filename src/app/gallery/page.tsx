@@ -8,14 +8,14 @@ export default function GalleryPage() {
   return (
     <div className="flex flex-col">
       {/* Header */}
-      <div className="flex justify-between items-baseline pb-6 px-12 pt-12 border-b border-border-subtle mx-8">
-        <h1 className="font-display italic font-light text-[22px] text-text-primary">
+      <div className="flex justify-between items-baseline pb-6 px-5 md:px-12 pt-8 md:pt-12 border-b border-border-subtle mx-4 md:mx-8">
+        <h1 className="font-display italic font-light text-[20px] md:text-[22px] text-text-primary">
           Design Gallery
         </h1>
       </div>
 
       {/* Grid */}
-      <div className="px-12 py-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+      <div className="px-5 md:px-12 py-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 md:gap-y-12">
         {/* Left Column */}
         <div className="flex flex-col gap-12 pt-0">
           {oddItems.map((item, idx) => (
