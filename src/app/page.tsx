@@ -27,7 +27,7 @@ export default function Home() {
     <div ref={containerRef} className="flex flex-col w-full relative">
 
       {/* ───── MOBILE LAYOUT ───── */}
-      <div className="md:hidden flex flex-col w-full px-6 pt-10">
+      <div className="md:hidden flex flex-col w-full px-6 pt-16">
         {/* Hero */}
         <div className="relative">
           <HeroName />
@@ -164,7 +164,7 @@ export default function Home() {
           </motion.div>
 
           {/* Right Column - Bottom: Photo */}
-          <div className="flex-1 pr-12 flex flex-col items-center relative z-10">
+          <div className="flex-1 pr-12 flex flex-col items-center relative z-10 pt-32">
             <motion.div
               style={{ y: photoY }}
               className="w-[65%] max-w-[400px] aspect-square relative"

@@ -15,19 +15,29 @@ export default function GalleryPage() {
       </div>
 
       {/* Grid */}
-      <div className="px-5 md:px-12 py-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 md:gap-y-12">
-        {/* Left Column */}
-        <div className="flex flex-col gap-12 pt-0">
-          {oddItems.map((item, idx) => (
-            <GalleryItem key={item.id} item={item} index={idx * 2} />
+      <div className="px-5 md:px-12 py-8">
+        {/* Mobile: Single Column (Sequential order) */}
+        <div className="flex flex-col gap-10 md:hidden">
+          {gallery.map((item, idx) => (
+            <GalleryItem key={item.id} item={item} index={idx} />
           ))}
         </div>
-        
-        {/* Right Column */}
-        <div className="flex flex-col gap-12 pt-0 md:pt-16">
-          {evenItems.map((item, idx) => (
-            <GalleryItem key={item.id} item={item} index={idx * 2 + 1} />
-          ))}
+
+        {/* Desktop: Two Columns (Staggered layout) */}
+        <div className="hidden md:grid grid-cols-2 gap-x-8">
+          {/* Left Column */}
+          <div className="flex flex-col gap-12 pt-0">
+            {oddItems.map((item, idx) => (
+              <GalleryItem key={item.id} item={item} index={idx * 2} />
+            ))}
+          </div>
+          
+          {/* Right Column */}
+          <div className="flex flex-col gap-12 pt-16">
+            {evenItems.map((item, idx) => (
+              <GalleryItem key={item.id} item={item} index={idx * 2 + 1} />
+            ))}
+          </div>
         </div>
       </div>
 

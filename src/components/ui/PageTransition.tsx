@@ -14,8 +14,8 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
         animate="visible"
         exit="hidden"
         variants={{
-          hidden: { opacity: 0, y: 8 },
-          visible: { opacity: 1, y: 0, transitionEnd: { transform: "none" } }
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transitionEnd: { transform: "none" } }
         }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >

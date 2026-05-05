@@ -20,7 +20,7 @@ export function SkillsSection() {
     <motion.div
       ref={ref}
       style={{ y }}
-      className="w-full mt-32 mb-24 pr-12"
+      className="w-full mt-16 md:mt-32 mb-24 md:pr-12"
     >
       <SectionLabel label="SKILLS" />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">

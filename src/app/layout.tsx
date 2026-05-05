@@ -36,12 +36,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${dmSans.variable} ${dmMono.variable}`}>
-      <body className="min-h-screen bg-background text-text-primary font-sans antialiased overflow-x-hidden">
+      <body className="min-h-screen bg-background text-text-primary font-sans antialiased">
         <CustomCursor />
-        <ThemeToggle />
-        <div className="flex min-h-screen">
+        <div className="flex min-h-screen overflow-x-hidden">
           <Sidebar />
-          <main className="flex-1 w-full md:ml-20 md:w-[calc(100%-5rem)] pb-20 md:pb-0">
+          <main className="flex-1 w-full md:ml-20 md:w-[calc(100%-5rem)] pb-20 md:pb-0 relative">
+            {/* ThemeToggle at top-right — scrolls away naturally when page scrolls */}
+            <div className="absolute top-4 right-4 md:top-6 md:right-6 z-50">
+              <ThemeToggle />
+            </div>
             <PageTransition>
               {children}
             </PageTransition>
